@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="noteContainer">
+            <div class="header">
+                <img src="./5-512.webp" alt="logo" class="logo">
+                <h1>Notes</h1>
+            </div>
+
+            <button id="addBtn">&#9997 Create Note</button>
+        </div>
+
+        <div class="content">
+            <div class="noteCard noteInputBox" hidden>
+                <div class="noteSave">
+                   <button id="saveNoteBtn" >&#128190</button> 
+                </div>
+
+                <div class="noteContent">
+                    <!-- Note Heading -->
+                    <input type="text" id="noteHeading" placeholder="Write your note..." />
+
+                    <!-- Note Section -->
+                    <div class="noteSection">
+                        <input type="text" id="noteText" placeholder="write your note..."/>
+                        <button class="addNote">Add</button>
+                        <ul>
+                            <li class="noteItem">Note 1 <button>&#10006</button></li>
+                            <li class="noteItem">Note 2 <button>&#10006</button></li>
+                        </ul>
+                    </div>                
+                </div>
+            </div>
+
+            <div class="noteCard">
+                <div class="noteBtns">
+                    <button class="editBtn">&#128221</button>
+                    <button class="deleteBtn"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="divHead">Head 1</div>
+                <div class="divText">
+                    <p>content 1</p>
+                    <p>content 2</p>
+                </div>
+            </div>
+    </div>
+    <script src="app.js" charset="UTF-8"></script>
+</body>
+</html>

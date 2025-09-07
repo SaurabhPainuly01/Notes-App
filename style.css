@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background-color: #7dd3fc;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+.noteContainer {
+    margin: 5% 0 10% 10%;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+    border-radius: 30%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-left: 15px;
+    color: #3a4d2c;
+}
+
+#addBtn {
+    background-color: #a3cf62;
+    color: #1e3a1f;
+    width: 200px;
+    height: 60px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+#addBtn:active {
+    background-color: #8cbf52;
+    color: #ffffff;
+    transform: scale(0.95);
+}
+
+.content {
+    margin-left: 10%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 50px;
+    row-gap: 100px;
+}
+
+.noteCard {
+    background-color: #dff5e1;
+    color: #2e3e2e;
+    border-radius: 12px;
+    width: 100%;
+    height: 420px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 1500px) {
+    .content {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 30px;
+        row-gap: 100px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .content {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 30px;
+        row-gap: 100px;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 2600px) {
+    .content {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        margin-left: 10%;
+        margin-right: 5%;
+        column-gap: 50px;
+    }
+}
+
+.noteBtns {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 12px;
+    gap: 10px;
+    background-color: #b5e4b2;
+    border-radius: 12px 12px 0 0;
+}
+
+.noteBtns button {
+    font-size: 1.5rem;
+    width: 30px;
+    height: 40px;
+    border: none;
+    background-color: #b5e4b2;
+}
+
+.noteBtns button:active {
+    background-color: #a3cf62;
+    color: #1e3a1f;
+    transform: scale(0.95);
+}
+
+
+.noteSave {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 12px;
+    gap: 10px;
+    background-color: #b5e4b2;
+    border-radius: 12px;
+}
+
+.noteSave button {
+    font-size: 1.5rem;
+    width: 30px;
+    height: 40px;
+    border: none;
+    background-color: #b5e4b2;
+}
+
+.noteSave button:active {
+    background-color: #a3cf62;
+    color: #1e3a1f;
+    transform: scale(0.95);
+}
+
+.noteContent {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+}
+
+.noteContent #noteHeading {
+    height: 40px;
+    width: 100%;
+    font-size: 1.2rem;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#noteHeading:focus {
+    outline: none;
+    border-bottom: 2px solid #a3cf62;
+}
+
+.noteSection {
+    display: grid;
+    grid-template-columns: 80% auto;
+    column-gap: 10px;
+}
+
+.noteContent #noteText {
+    height: 40px;
+    font-size: 1.2rem;
+    resize: none; 
+    border: none;
+    padding: 10px;
+}
+
+#noteText:focus {
+    outline: none;
+    border-bottom: 2px solid #a3cf62;
+}
+
+.noteSection .addNote {
+    font-size: 1.1rem;
+    background-color: #8cbf4e;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+
+.noteSection .addNote:active {
+    background-color: #678d32;
+    color: #ffffff;
+    transform: scale(0.95);
+}
+
+.noteSection ul {
+    margin: 20px;
+    font-size: 1.2rem;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.noteSection ul li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.noteSection ul li button {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.noteSection ul li button:active {
+    background-color: #c0392b ;
+    color: #ffffff;
+    transform: scale(0.85);
+    
+}
+
+.noteCard .divHead {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+}
+
+.noteCard .divText {
+    font-size: 1.3rem;
+    margin-left: 30px;
+}
