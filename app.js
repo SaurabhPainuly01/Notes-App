@@ -58,9 +58,10 @@ function createNotecard(heading, lines) {
     return card;
 }
 
+// Function to display a note on the page and also store its unique ID in a data attribute
 function displayNote(note) {
     let notecard = createNotecard(note.heading, note.lines);
-    notecard.dataset.id = note.id; // Store unique ID for future reference
+    notecard.dataset.id = note.id;   // Store unique ID for future reference
     content.appendChild(notecard);
 }
 
@@ -96,7 +97,6 @@ saveNoteBtn.addEventListener('click', ()=> {
     let lines = Array.from(ul.querySelectorAll('li')).map(li => li.firstChild.textContent);
 
     let noteCard = createNotecard(capitalizingHeading, lines);
-    console.log(lines);
 
     if (!heading && lines.length === 0) {
         // Don't save empty notes
@@ -117,7 +117,7 @@ saveNoteBtn.addEventListener('click', ()=> {
 
     displayNote(newNote);
 
-    // content.appendChild(noteCard);
+    // content.appendChild(noteCard);     // not appending here because displayNote function already does that and if we do it again, then notecard will be appended twice
 
     // Clear draft and inputs
     ul.innerHTML = '';
@@ -143,6 +143,7 @@ content.addEventListener('click', (e) => {
         ul.innerHTML = '';
         lines.forEach(line => ul.appendChild(createDraftLi(line)));
 
+        // Remove the old note from notesArray and localStorage
         notesArray = notesArray.filter(note => String(note.id) !== noteCardId);       // Remove old note from array
         localStorage.setItem('notes', JSON.stringify(notesArray));
 
@@ -150,12 +151,11 @@ content.addEventListener('click', (e) => {
     }
 
     let deleteCardBtn = e.target.closest('.deleteBtn');
-    console.log(deleteCardBtn);
 
     if (deleteCardBtn) {      
         if (noteCard) {
             // Remove from notesArray and update localStorage
-            notesArray = notesArray.filter(note => String(note.id) !== noteCardId);   // Remove note from array
+            notesArray = notesArray.filter(note => String(note.id) !== noteCardId);   // This removes the note with the matching id from your in-memory array
             
             localStorage.setItem('notes', JSON.stringify(notesArray));
             noteCard.remove()
