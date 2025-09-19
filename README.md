@@ -1,9 +1,21 @@
-# Notes App
-A simple note-taking application built with HTML, CSS, and JavaScript, utilizing LocalStorage for persistent data storage.
-## Features
+# 📝 Notes App
 
-* **Add Notes:** Create new notes with ease.
-* **Edit Notes:** Modify existing notes as needed.
-* **Delete Notes:** Remove notes that are no longer required.
-* **Local Storage Persistence:** Notes are saved locally using the browser's LocalStorage, ensuring data is retained even after closing the application.
-* **Simple and Responsive UI:**  Clean and intuitive user interface that adapts to different screen sizes.
+A simple and responsive Notes App built with **HTML, CSS, and JavaScript** that allows users to create, manage, and store notes directly in the browser using `localStorage`.
+
+---
+
+## 🚀 Features
+- Add new notes instantly
+- Edit or delete notes
+- Persistent storage with `localStorage` (notes remain after page reload)
+- Responsive design for desktop and mobile
+- Minimal and user-friendly interface
+
+---
+
+## 🛠️ Tech Stack
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla JS)**
+- **localStorage**
+
